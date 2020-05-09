@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Topdown shooter</title>
+    <style>
+      body {
+        padding: 0;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .top-bar {
+        position: absolute;
+        width: calc(100% - 40px);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        z-index: 9;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+
+      .life-container {
+        display: flex;
+      }
+
+      .life-bar {
+        height: 25px;
+        width: 250px;
+        margin-left: 10px;
+        background-color: rgba(180, 180, 180, 0.7);
+      }
+
+      .life-thumb {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <div class="life-container">
+        Life:
+        <div class="life-bar">
+          <div class="life-thumb" id="life"></div>
+        </div>
+      </div>
+
+      <div class="score">Score: <span id="score">0</span></div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="p5/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.14.2/matter.js"></script>
+    <script src="p5/addons/p5.sound.js"></script>
+    <script src="game/data/sound-data.js"></script>
+    <script src="game/sound-manager.js"></script>
+    <script src="game/particle-system.js"></script>
+    <script src="game/particle.js"></script>
+    <script src="game/enemy-follow.js"></script>
+    <script src="game/enums/bullet-type.js"></script>
+    <script src="game/bullet.js"></script>
+    <script src="game/player.js"></script>
+    <script src="game/game-manager.js"></script>
+    <script src="game/sketch.js"></script>
+  </body>
+</html>
